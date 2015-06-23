@@ -1,0 +1,15 @@
+<h1>Cats upon cats!</h1>
+
+<ul>
+  <% @cats.each do |cat| %>
+    <li><%= link_to cat.name.capitalize, cat_url(cat) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Rent a  cat", new_cat_rental_request_url %>
+<br>
+<%= link_to "Create cat", new_cat_url %>
+<br>
+<%= link_to "Log in", new_session_url %>
+<br>
+<%= link_to "Create an account", new_user_url %>

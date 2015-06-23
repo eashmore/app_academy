@@ -1,0 +1,20 @@
+.tab-pane {
+  display: none;
+}
+
+.active {
+  font-weight: bold;
+  display: block;
+  transition: opacity 500ms;
+}
+
+.active-tab {
+  font-weight: bold;
+  color: red;
+}
+
+.transitioning {
+  display: block;
+  opacity: 0;
+  transition: opacity 500ms;
+}

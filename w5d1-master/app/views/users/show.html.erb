@@ -1,0 +1,21 @@
+<h1><%= @user.username %></h1>
+
+<%= button_to "New Goal", new_user_goal_url(@user), method: :get%><br>
+
+<ul>
+  <% Goal.all.each do |goal| %>
+    <% if goal.private_or_public == "public" || goal.user_id == current_user.id %>
+      <li><%= goal.title %>
+      <br>
+      <%= goal.body %>
+      <br>
+      <%= button_to "Edit Goal", edit_goal_url(goal), method: :get %>
+      <br>
+      <%= goal.completed %>
+      <br>
+      <%= render "goals/form", goal: goal, path: goal_url(goal) %>
+      <br>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

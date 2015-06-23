@@ -1,0 +1,9 @@
+<form action="<%= path %>" method="post">
+  <input type=hidden name=_method value="patch">
+  
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <input type="hidden" name="goal[completed]" value="Complete">
+
+  <input type="submit" name="name" value="Completed?">
+</form>

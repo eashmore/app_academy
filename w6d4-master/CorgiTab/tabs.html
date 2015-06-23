@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cool Website</title>
+    <script src="./jquery-1.11.3.js"></script>
+    <script src="./tabs.js"></script>
+    <link href="./tabs.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
+  </head>
+
+  <body>
+    <ul class='tabs' data-content-tabs="#content-tabs">
+      <li><a href="#corgi" class="active-tab" >Corgi</a></li>
+      <li><a href="#german-shepard">German Shepard</a></li>
+      <li><a href="#greyhound">Greyhound</a></li>
+    </ul>
+    <div id="content-tabs">
+      <div id="corgi" class="tab-pane"> <p>
+        The Welsh corgi is a small type of herding dog that originated in Wales.
+        Two distinct breeds are recognized: the Pembroke Welsh corgi and the
+        Cardigan Welsh corgi, with the Pembroke being the more common.
+      </p></div>
+      <div id="german-shepard" class="tab-pane"> <p>
+        The German Shepherd is a breed of large-sized working dog that
+        originated in Germany. The breed's officially recognized name is German
+        Shepherd Dog in the English language, sometimes abbreviated as "GSD",
+        and was also formerly known as the Alsatian and Alsatian Wolf Dog in
+        Britain.
+      </p></div>
+      <div id="greyhound" class="tab-pane"><p>
+        The Greyhound is a very old European breed of dog, a sighthound which
+        has been historically bred for coursing game and latterly Greyhound
+        racing. Since the rise in large scale adoption of retired racing
+        Greyhounds, particularly in North America from the end of the 20th
+        century, it has seen a resurgence in popularity as a family pet.
+      </p></div>
+    </div>
+    <script>
+      $(function() {
+        $('.tabs').tabs();
+      })
+    </script>
+  </body>
+</html>

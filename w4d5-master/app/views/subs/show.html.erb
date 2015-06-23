@@ -1,0 +1,17 @@
+<%= render @sub %>
+<br>
+
+<%= link_to "New Post", new_sub_post_url(@sub) %>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <label><b><%= link_to "#{post.title}", post %></b>
+        <p><%= post.content %></p>
+      </label>
+    </li>
+    <%= link_to "Edit post", edit_post_url(post) %>
+    <hr>
+  <% end %>
+</ul>
+
+<%= link_to "Edit sub", edit_sub_url(@sub) %>

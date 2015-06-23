@@ -1,0 +1,17 @@
+<form class="post-form">
+  <label>Title
+  <input type="text"
+         class="post-title"
+         name="post[title]"
+         value="<%=post.get("title")%>"
+  ></label>
+
+  <label>Body
+  <input type="text"
+         class="post-body"
+         name="post[body]"
+         value="<%=post.get("body")%>"
+  ></label>
+
+  <input type="submit" value="save">
+</form>

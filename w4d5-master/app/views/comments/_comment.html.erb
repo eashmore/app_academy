@@ -1,0 +1,10 @@
+<ul>
+<% comment.child_comments.each do |child| %>
+  <li><%= child.author.username + ": " %>
+    <%= child.content %>
+    <br>
+    <%= time_ago_in_words(child.created_at) + " ago" %>
+    <br>
+  </li>
+<% end %>
+</ul>
